@@ -1,11 +1,11 @@
 let tasks = [];
 
-// حفظ المهام في localStorage
+
 const saveTasks = () => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-// إضافة مهمة جديدة
+
 const addTask = () => {
     const taskInput = document.getElementById("taskInput");
     const text = taskInput.value.trim();
@@ -18,7 +18,7 @@ const addTask = () => {
     }
 };
 
-// حذف مهمة
+
 const deleteTask = (index) => {
     tasks.splice(index, 1);
     updateTaskList();
@@ -26,14 +26,14 @@ const deleteTask = (index) => {
     saveTasks();
 };
 
-// تحرير مهمة
+
 const editTask = (index) => {
     const taskInput = document.getElementById("taskInput");
     taskInput.value = tasks[index].text;
     deleteTask(index);
 };
 
-// تحديث النص التحفيزي بناءً على حالة المهام
+
 const updateMotivationalText = () => {
     const completTasks = tasks.filter(task => task.completed).length;
     const totalTasks = tasks.length;
@@ -50,7 +50,7 @@ const updateMotivationalText = () => {
     }
 };
 
-// تحديث الإحصائيات
+
 const updateStats = () => {
     const completTasks = tasks.filter(task => task.completed).length;
     const totalTasks = tasks.length;
@@ -66,7 +66,7 @@ const updateStats = () => {
         statsNumber.innerText = `${completTasks}/${totalTasks}`;
     }
 
-    // تحديث النص التحفيزي
+  
     updateMotivationalText();
 
     if (tasks.length && completTasks === totalTasks) {
@@ -74,13 +74,13 @@ const updateStats = () => {
     }
 };
 
-// تغيير حالة إتمام المهمة
+
 const toggleTaskComplete = (index) => {
     tasks[index].completed = !tasks[index].completed;
     updateStats();
     saveTasks();
 
-    // تحديث الـ DOM لإضافة الفئة completed
+   
     const taskItem = document.querySelectorAll('.taskItem')[index];
     const taskText = taskItem.querySelector('.task');
     if (tasks[index].completed) {
@@ -90,7 +90,7 @@ const toggleTaskComplete = (index) => {
     }
 };
 
-// تحديث قائمة المهام
+
 const updateTaskList = () => {
     const taskList = document.getElementById("task-list");
     if (!taskList) {
@@ -118,13 +118,13 @@ const updateTaskList = () => {
     });
 };
 
-// إضافة مهمة عند الضغط على الزر
+
 document.getElementById("newTask").addEventListener("click", function (e) {
     e.preventDefault();
     addTask();
 });
 
-// تنفيذ تأثير الكنفتي عند إتمام كل المهام
+
 const blaskConfetti = () => {
     const count = 200,
         defaults = {

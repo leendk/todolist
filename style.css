@@ -1,19 +1,19 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+
 body {
-    background: #fbe4e8; /* لون خلفية زهري فاتح */
-    color: #444; /* نص داكن لراحة العين */
+    background: #fbe4e8; 
+    color: #444; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
 }
 
-/* Container styling */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -25,47 +25,47 @@ body {
     padding: 20px;
 }
 
-/* Stats container styling */
+
 .stats-container {
     padding: 25px;
     border-radius: 15px;
-    border: 2px solid #f06292; /* لون زهري داكن */
+    border: 2px solid #f06292;
     display: flex;
     justify-content: space-between;
     gap: 30px;
     width: 100%;
-    background: linear-gradient(135deg, #f8bbd0, #f06292); /* تدرج لوني ناعم بين الزهري الفاتح والداكن */
+    background: linear-gradient(135deg, #f8bbd0, #f06292); 
     color: #333;
 }
 
-/* Details styling inside stats */
+
 .details {
     width: 100%;
 }
 
-/* Styling for the progress bar */
+
 #progressBar {
     width: 100%;
     height: 8px;
-    background-color: #f8bbd0; /* خلفية زهري فاتح */
+    background-color: #f8bbd0;
     border-radius: 5px;
     margin-top: 15px;
 }
 
-/* Styling for the actual progress inside the bar */
+
 #progress {
-    width: 0%; /* يبدأ من 0% */
+    width: 0%; 
     height: 8px;
-    background-color: #f06292; /* زهري داكن */
+    background-color: #f06292; 
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-/* Stats number styling (completed/total tasks) */
+
 #numbers {
     width: 90px;
     height: 90px;
-    background-color: #f06292; /* زهري داكن */
+    background-color: #f06292; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +75,7 @@ body {
     color: white;
 }
 
-/* Form styling for adding tasks */
+
 form {
     margin-top: 50px;
     width: 100%;
@@ -83,12 +83,12 @@ form {
     gap: 15px;
 }
 
-/* Styling for the input field */
+
 input {
     flex: 1;
     padding: 14px;
     background: #fff;
-    border: 1px solid #f06292; /* حدود باللون الزهري */
+    border: 1px solid #f06292; 
     border-radius: 12px;
     outline: none;
     color: #555;
@@ -97,10 +97,10 @@ input {
 }
 
 input:focus {
-    border-color: #ec407a; /* تغيير اللون عند التركيز */
+    border-color: #ec407a; 
 }
 
-/* Styling for the add button */
+
 button {
     width: 55px;
     height: 55px;
@@ -118,12 +118,12 @@ button {
     transition: background 0.3s ease;
 }
 
-/* Button hover effect */
+
 button:hover {
     background-color: #ec407a;
 }
 
-/* Task list styling */
+
 #task-list {
     display: flex;
     flex-direction: column;
@@ -133,11 +133,11 @@ button:hover {
     list-style: none;
 }
 
-/* Task item styling */
+
 .taskItem {
     width: 100%;
     display: flex;
-    background-color: #f8bbd0; /* خلفية زهري فاتح */
+    background-color: #f8bbd0; 
     padding: 12px;
     border-radius: 12px;
     justify-content: space-between;
@@ -146,10 +146,9 @@ button:hover {
 }
 
 .taskItem:hover {
-    background-color: #f06292; /* تأثير تفاعل عند المرور */
+    background-color: #f06292;
 }
 
-/* Styling for task description */
 .task {
     display: flex;
     align-items: center;
@@ -157,19 +156,19 @@ button:hover {
     font-size: 18px;
 }
 
-/* Checkbox styling inside task */
+
 .task input {
     width: 22px;
     height: 22px;
 }
 
-/* Task styling when completed */
+
 .task.completed {
-    text-decoration: line-through; /* إضافة الخط عبر النص */
-    color: #b71c1c; /* لون النص عند إتمام المهمة */
+    text-decoration: line-through; 
+    color: #b71c1c; 
 }
 
-/* Icons (edit and delete) inside task */
+
 .taskItem img {
     width: 26px;
     height: 26px;
@@ -179,11 +178,11 @@ button:hover {
 }
 
 .taskItem img:hover {
-    transform: scale(1.2); /* تكبير الأيقونات عند المرور */
+    transform: scale(1.2); 
     opacity: 0.8;
 }
 
-/* Responsive design for mobile devices */
+
 @media (max-width: 600px) {
     .container {
         margin-top: 40px;
